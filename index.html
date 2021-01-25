@@ -17,7 +17,7 @@
 		<div class="reveal">
 			<div class="slides">
                 <section>
-                    <section>
+                    <section data-transition="zoom">
                   
                         <h1>Information geometry task</h1>
             
@@ -33,7 +33,7 @@
                     </section>
                 </section>
                 <section>
-                    <section>
+                    <section data-transition="zoom">
                         <h2> Mathematical background </h2>
                     </section>
                     <section>
@@ -58,7 +58,7 @@
                 </section>
                 
                 <section>
-                    <section>
+                    <section data-transition="zoom">
                         <h2> Geodesic equations </h2>
                     </section>
                     <section>
@@ -103,7 +103,7 @@
           
                 
                 <section>
-                    <section>
+                    <section data-transition="zoom">
                         <h2> Zero-mean normal distributions </h2>
                     </section>
                     <section>
@@ -153,14 +153,17 @@
                 </section>
                 
                 <section>
-                    <section>
+                    <section data-transition="zoom">
                         <h2> Hamiltonian formulation and conserved quantities </h2>
                     </section>
                     <section>
-                        <p> Formulation of geodesic equation on cotangent bundle. </p>
-                        <p class="fragment"> Let Position be $Q=C\in \operatorname{P}(n)$ </p>
-                        <p class="fragment"> Lagrangian is given by $L(Q,\dot{Q})=g_Q(\dot{Q},\dot{Q})$ </p>
-                        <p class="fragment"> Use Legendre transformation to obtain momentum $P=\frac{\mathrm{d}L(Q,\dot{Q})}{\mathrm{d}\dot{Q}}$  </p>
+                        <ul>
+                        <li class="fragment"> Formulation of geodesic equation on cotangent bundle. </li>
+                        <li class="fragment"> Let Position be $Q=C\in \operatorname{P}(n)$ </li>
+                        <li class="fragment"> Lagrangian is given by $L(Q,\dot{Q})=g_Q(\dot{Q},\dot{Q})$ </li>
+                        <li class="fragment"> Use Legendre transformation to obtain momentum $P=\frac{\mathrm{d}L(Q,\dot{Q})}{\mathrm{d}\dot{Q}}$  </li>
+                        <li class="fragment"> Calculate $\dot{P}$ and use the geodesic equations to find expressions for Hamilton's equations  </li>
+                        <ul>
                     </section>
                     <section>
                         <h3>  Fisher-Rao case</h3>
@@ -182,8 +185,16 @@
                         <p class="fragment"> $H_{WO}(P,Q)=\operatorname{Tr}(PQP)$ </p>
                     </section>
                     <section>
-                       
-                        <p> Note that $A \in \operatorname{GL}(n)$ acts on $(P,Q)$ by
+                       <h3> Conserved quantities </h3>
+                       <p class="fragment"> $A \in\operatorname{GL}(n)$ acts on $Q \in \operatorname{P}(n)$ by $AQA^T$
+                       <p class="fragment"> We wish to determine the action of $A$ on the cotangent bundle.
+                       <p class="fragment"> We make the identification $T^* \operatorname{P}(n) \cong T \operatorname{P}(n)$ by the Frobenius inner product $\langle A,B \rangle_F=\operatorname{Tr}(AB)$.</p>
+                       </section>
+                        <section>
+                        <p> We see that $ \langle P,A\dot{Q}A^T \rangle_F=\langle A P A^T,\dot{Q} \rangle_F$
+                         
+                        </p>
+                        <p class="fragment"> We conclude that $A \in \operatorname{GL}(n)$ acts on $(Q,P)$ by
                         $$
                         (Q,P).A=(A^{-1} Q (A^{-1})^T,A^T P A)
                         $$
@@ -201,6 +212,8 @@
                         <section>
                             <ul >
                              <li class="fragment">$\operatorname{GL}(n)$ is a symmetry group in the Fisher–Rao case</li>
+                             <li class="fragment"> Note that $\mathfrak{Lie}(\operatorname{GL}(n))^* \cong M_n^* \cong M_n$.</li>
+                             <li class="fragment"> Infinitesimal action for any $\xi \in \mathfrak{Lie}(\operatorname{GL}(n))$ becomes $\xi(M)=\xi M+M\xi^T$, so $\langle \mathcal{P},\xi(Q)\rangle=\operatorname{Tr}(P\xi Q+PQ \xi^T)$</li>
                              <li class="fragment">  The corresponding conserved quantity is $2PQ$ </li>
                              </ul>
                         </section>
@@ -208,6 +221,8 @@
                              <ul >
 
                                  <li class="fragment">  $\operatorname{O}(n)$ is a symmetry group for both cases </li>
+                                 <li class="fragment"> Infinitesimal action for any $\xi \in \mathfrak{Lie}(\operatorname{O}(n))$ becomes $\xi(M)=\xi M-M\xi$, so $\langle \mathcal{P},\xi(Q)\rangle=\operatorname{Tr}(P\xi Q-PQ \xi)$</li>
+                                
                                  <li class="fragment">  The corresponding conserved quantity is $[Q,P]=QP-PQ$ </li>
                              </ul>
                         
@@ -215,8 +230,8 @@
                 </section>
                 
                 <section>
-                    <section>
-                        <h2> Numerical solution of Hamilton's equation </h2>
+                    <section data-transition="zoom">
+                        <h2> Numerical solution of Hamilton's equations </h2>
                     </section>
                     <section>
                         <ul >
@@ -267,7 +282,7 @@
                          </table>
                     </section>
                     <section>
-                        <h3>Evolution of P and Q</h3>
+                        <h3>Evolution of Q and P</h3>
                         <table class="reveal">
                            <tr>
                              <td><img class="fragment"  src="./bilder_slutprez/FR.png" width="450" height="300">
@@ -332,9 +347,13 @@
                            </tr>
                          </table>
                     </section>
-                </section>
-               
+                    </section>
+                    <section data-transition="zoom">
+                        <h3> Thank you! </h3>
+                        <p><center class="fragment"> Questions?<center></p>
+                    </section>¨
                 </div>
+            
 		</div>
         <style type="text/css">
           .reveal p {

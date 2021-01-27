@@ -35,7 +35,7 @@
                 <section>
                 <section data-transition="zoom">
               
-                    <h1>Moving between normal distributions...</h1>
+                    <h2>Moving between normal distributions...</h2>
 
                 </section>
                 
@@ -51,9 +51,9 @@
                      </table>
                 </section>
                 <section>
-                    <h3> Can we do it in such a way that entropy changes linearly?</h3>
+                    <h3> Can we move so that entropy changes linearly?</h3>
                     <img class="fragment" src="./bilder_slutprez/Entropy_mot_ex.png") >
-                    <p> Sounds like geometry!</p>
+                    <p class="fragment"> Sounds like a question we can answer with geometry!</p>
                 </section>
                 </section>
                 <section>
@@ -191,7 +191,7 @@
                     </section>
                     <section>
                         <h3>  Fisher-Rao case</h3>
-                        <p class="fragment"> Hamilton's equations: \[\begin{aligned}\begin{cases}
+                        <p class="fragment"> Hamilton's equations, with $Q=C=\Sigma^{-1}$: \[\begin{aligned}\begin{cases}
                         \dot Q=QPQ\\
                         \dot P=-PQP
                        \end{cases} \end{aligned}\]
@@ -201,7 +201,7 @@
                    
                     <section>
                         <h3>  Wasserstein–Otto case</h3>
-                        <p class="fragment"> Hamilton's equations: \[\begin{aligned}\begin{cases}
+                        <p class="fragment"> Hamilton's equations, with $Q=\Sigma$: \[\begin{aligned}\begin{cases}
                         \dot Q=PQ+QP\\
                         \dot P=-{P}^2
                        \end{cases} \end{aligned}\]
@@ -262,8 +262,7 @@
                     <section>
                         <ul >
                             <li class="fragment fade-out">  Integrate Hamilton's equation using a symplectic method </li>
-                            <li class="fragment fade-in-then-out">  Use symplectic Euler for the Fisher–Rao equations  </li>
-                            <li class="fragment">  Use Störmer-Verlet for the Wasserstein–Otto equations  </li>
+                            <li class="fragment fragment">  Use symplectic Euler in both cases </li>
                         </ul>
                     
                     </section>
@@ -282,14 +281,14 @@
                        
                         </section>
                     <section>
-                        <h3> Störmer-Verlet for Wasserstein–Otto </h3>
+                        <h3> Symplectic Euler for Wasserstein–Otto </h3>
                         <p><sub>
                         \[\begin{aligned}\begin{cases}
-                        P_{n+1/2}=P_n -\frac{h}{2}P_{n+1/2}^2\\
-                        Q_{n+1}=Q_n + \frac{h}{2}\left( Q_{n}P_{n+1/2}+ P_{n+1/2}Q_{n}\right)+ \frac{h}{2}\left( Q_{n+1}P_{n+1/2}+P_{n+1/2} Q_{n+1}\right)\\
-                        P_{n+1}=P_{n+1/2}-\frac{h}{2}P_{n+1/2}^2
+                        P_{n+1}=P_n-h P_{n+1}\\
+                        Q_{n+1}=Q_n+h \left(Q_nP_{n+1}+P_{n+1}Q_{n}\right)
                        \end{cases} \end{aligned}\]
                         </p></sub>
+                        <p><center class="fragment"> Note that $P_{WO}=-P_{FR}$, since $Q=\Sigma$    in this case!</center> </p>
                         </section>
                     <section>
                         <h3> Gallery of solutions</h3>
@@ -308,60 +307,23 @@
                          </table>
                     </section>
                     <section>
-                        <h3>Evolution of Q and P</h3>
-                        <table class="reveal">
-                           <tr>
-                             <td><img class="fragment"  src="./bilder_slutprez/FR.png" width="450" height="300">
-                                 </td>
-                             <td><img class="fragment" src="./bilder_slutprez/FR_P.png" width="450" height="300"></td>
-                            
-                           </tr>
-                         </table>
+                        <h3>Evolution of $Q=\Sigma^{-1}$, Fisher–Rao </h3>
+                        <img class="fragment"  src="./bilder_slutprez/FR.png" width="450" height="300">
+                                 
                     </section>
                     <section>
-                        <h3>Evolution of Q and P</h3>
-                        <table class="reveal">
-                           <tr>
-                             <td><img class="fragment"  src="./bilder_slutprez/WO.png" width="450" height="300">
-                                 </td>
-                             <td><img class="fragment" src="./bilder_slutprez/WO_P.png" width="450" height="300"></td>
-                            
-                           </tr>
-                         </table>
+                        <h3>Evolution of $Q^{-1}=\Sigma^{-1}$, Wasserstein-Otto </h3>
+                       
+                            <img class="fragment"  src="./bilder_slutprez/WO.png" width="450" height="300">
+                        
                     </section>
                     <section>
-                        <h3>How does Q and P compare between cases?</h3>
-                        <table class="reveal">
-                           <tr>
-                             <td><img class="fragment"  src="./bilder_slutprez/comp.png" width="450" height="300">
-                                 </td>
-                             <td><img class="fragment"  src="./bilder_slutprez/comp_P.png" width="450" height="300">
-                                 </td>
-                                    </tr>
-                         </table>
+                        <h3>How does Q compare between cases?</h3>
+                        <h5 class="fragment">In the beginning...</h5>
+                        <img class="fragment"  src="./bilder_slutprez/comp_early.png" width="450" height="300">
+                          
                     </section>
-                    <section>
-                        <h3>In the beginning...</h3>
-                        <table class="reveal">
-                           <tr>
-                             <td><img class="fragment"  src="./bilder_slutprez/comp_early.png" width="450" height="300">
-                                 </td>
-                             <td><img class="fragment"  src="./bilder_slutprez/comp_P_early.png" width="450" height="300">
-                                 </td>
-                                   </tr>
-                         </table>
-                    </section>
-                    <section>
-                        <h3>and in the end...</h3>
-                        <table class="reveal">
-                           <tr>
-                             <td><img class="fragment"  src="./bilder_slutprez/comp_late.png" width="450" height="300">
-                                 </td>
-                             <td><img class="fragment"  src="./bilder_slutprez/comp_P_late.png" width="450" height="300">
-                                 </td>
-                                   </tr>
-                         </table>
-                    </section>
+                  
                     <section>
                         <h3>Conserved quantities?</h3>
                         <table class="reveal">
@@ -372,6 +334,35 @@
                             
                            </tr>
                          </table>
+                    </section>
+                    <section>
+                        <h3>Behavior of Shannon entropy.</h3>
+                        <p><center class="reveal"> $H(\Sigma)=\log(\det(\Sigma))+K$</center></p>
+                        <table class="reveal">
+                           <tr>
+                             <td><img class="fragment"  src="./bilder_slutprez/Entropy_all_FR.png" width="450" height="300">
+                                 </td>
+                             <td><img class="fragment" src="./bilder_slutprez/Entropy_all_WO.png" width="450" height="300"></td>
+                            
+                           </tr>
+                         </table>
+                    </section>
+                    <section>
+                        <h3>Why? </h3>
+                        <ul >
+                            <li class="fragment">  $C(t)$ is a Fisher-Rao geodesic. </li>
+                            <li class="fragment">  $\dot{H}(t)=\frac{\mathrm{d}}{\mathrm{d}t}-\log(\det(C(t)))=-\operatorname{Tr}(C^{-1}\dot{C}) $ </li>
+                            <li class="fragment"> $-\operatorname{Tr}(C^{-1}\dot{C})=-\operatorname{Tr}(C^{-1} C P C)=-\operatorname{Tr}(PC)$... </li>
+                            <li class="fragment"> $PC$ preserved on geodesics! </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>So... </h3>
+                        <ul >
+                            <li class="fragment"> $H(t)$ decreases linearly! </li>
+                            <li class="fragment"> In the end, we will have some degenerate distribution!</li>
+                            <li class="fragment"> <b> We can find a curve between two normal distributions changing linearly!</b> </li>
+                        </ul>
                     </section>
                     </section>
                     <section data-transition="zoom">

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
@@ -18,7 +18,7 @@
 			<div class="slides">
                 <section>
                     <section data-transition="zoom">
-                  
+
                         <h1>Before we begin...</h1>
 
                     </section>
@@ -34,19 +34,19 @@
                 </section>
                 <section>
                 <section data-transition="zoom">
-              
+
                     <h2>Moving between normal distributions...</h2>
 
                 </section>
-                
+
                 <section>
                     <table class="reveal">
                        <tr>
                          <td> <img   src="./bilder_slutprez/mvn1.png" width="450" height="300">
                              </td>
-                    
+
                          <td><img class="fragment" src="./bilder_slutprez/mvn2.png" width="450" height="300"></td>
-                   
+
                        </tr>
                      </table>
                 </section>
@@ -72,7 +72,7 @@
                                  <img class="fragment" src="./bilder_slutprez/denwtan.png",width="900" height="600">
                                      </div>
                        <!-- < class="fragment"> $T\operatorname{Dens}(M)=\operatorname{Dens}(M) \times C_0^\infty(M) $.  -->
-                     
+
                     </section>
                     <section>
                         <p>  Two Riemannian metrics on $\operatorname{Dens}(M)$ </p>
@@ -80,26 +80,26 @@
                         <p class="fragment"> 2. Wasserstein-Otto metric, $\langle \dot\rho,\dot\rho \rangle_\rho = \int_M |\nabla S|^2 \rho\mu$ where $\dot \rho =-\operatorname{div}(\rho \nabla S )$</p>
                     </section>
                 </section>
-                
+
                 <section>
                     <section data-transition="zoom">
                         <h2> Geodesic equations </h2>
                     </section>
                     <section>
                         <h3> Variational approach </h3>
-                        
+
                         <p><sup class="fragment">  A <em> geodesic </em> $\gamma:[0,1] \to \operatorname{Dens}(M)$ is a minimizer of the functional $$ \mathcal{A}(\gamma(t))=\int_0^1 (\dot{\gamma}(t),\dot{\gamma}(t))_{\gamma(t)} \mathrm{d}t $$</sup></p>
                         </section>
-                         
-                             
-                   
+
+
+
                     <section>
                         <div class="r-stack"><img src="./bilder_slutprez/varoc.png",width="450" height="300"> </center></div>
                         <p><sup class="fragment"> For a minimizer $\gamma$  of $\mathcal{A}$ it must hold that $$\left.\frac{\mathrm{d}A(\gamma_0+\epsilon h)}{\mathrm{d}\epsilon} \right|_{\epsilon=0}=0$$</sup>   </p>
                     </section>
                     <section>
                         <p>  Plug in the expression of the Fisher-Rao metric...</p>
-                       
+
                         <p class="fragment"> $$\left.\frac{\mathrm{d}}{\mathrm{d}\epsilon} A(\gamma_\epsilon)\right|_{\epsilon=0}=\int_0^1 \int_M \frac{2\dot h \dot\gamma_0}{\gamma_0}-\frac{\dot\gamma_0^2 h}{\gamma_0^2}\mathrm{d}s=0$$</p>
                         <p class="fragment fade-in-then-out">...integrate by parts...</p>
                         <p class="fragment"> $$\int_0^1 \int_M h \left( \frac{\dot\gamma_0^2}{\gamma_0^2}-\frac{ 2\ddot\gamma_0 \gamma_0}{\gamma_0^2} \right)\mathrm{d}s=0$$</p>
@@ -112,7 +112,7 @@
                     <section>
                         <p> The Wasserstein–Otto case is more complex...</p>
                         <p class="fragment"> Given a perturbation of the geodesic $\gamma_0+\epsilon h$, how does $S$ depend on $\epsilon$ and $h$?  </p>
-                     
+
                     </section>
                     <section>
                         <p class="fragment"> Use $\dot{\rho}=-\operatorname{div}(\rho \nabla S )$ to see that $\dot h = -\text{div} \left(h \nabla S_{\gamma_0+\epsilon h} \right)-\text{div}\left((\gamma_0+\epsilon h) \frac{\mathrm{d} \nabla S_{\gamma_0+\epsilon h}}{\mathrm{d}\epsilon} \right)$ </p>
@@ -123,9 +123,9 @@
                         \end{aligned} \]</p>
                     </section>
                 </section>
-                
-          
-                
+
+
+
                 <section>
                     <section data-transition="zoom">
                         <h2> Zero-mean normal distributions </h2>
@@ -136,7 +136,7 @@
                          <li class="fragment">  Coordinates for the <em>statistical manifold of normal distributions</em>, $\mathcal{S}$ </li>
                          <li class="fragment"> One can show that $\mathcal{S} \cong \operatorname{P}(n) \subset \operatorname{GL}(n)$</li>
                        </ul>
-                     
+
                     </section>
                     <section>
                         <p>  Geodesics? </p>
@@ -160,7 +160,7 @@
                     </section>
                     <section>
                         <p> Equip $\operatorname{GL}(n)$ with the natural $L^2$ metric </p>
-                        <p class="fragment"> Calculate derivative of projection </p>
+                        <p class="fragment"> Calculate derivative of the projection </p>
                         <p class="fragment"> Calculate the descending metric on $\operatorname{P}(n)$ from this </p>
                         <p class="fragment"> We obtain that $G_\Sigma(\dot \Sigma,\dot \Sigma)=\operatorname{Tr}(\Sigma S^2)$ with $\dot{\Sigma}=\Sigma S+S\Sigma $
                     </section>
@@ -175,17 +175,17 @@
                      For more details, please see <a href="https://arxiv.org/pdf/1601.01875.pdf" id="expander" class="enabled">Klas Modin's article</a> </p>
                     </section>
                 </section>
-                
+
                 <section>
                     <section data-transition="zoom">
                         <h2> Hamiltonian formulation and conserved quantities </h2>
                     </section>
                     <section>
                         <ul>
-                        <li class="fragment"> Formulation of geodesic equations on cotangent bundle. </li>
+                        <li class="fragment"> Formulation of the geodesic equations on the cotangent bundle. </li>
                         <li class="fragment"> Let the position be a $Q \in \operatorname{P}(n)$ </li>
                         <li class="fragment"> Lagrangian is given by $L(Q,\dot{Q})=g_Q(\dot{Q},\dot{Q})$ </li>
-                        <li class="fragment"> Use Legendre transformation to the obtain momentum $P=\frac{\mathrm{d}L(Q,\dot{Q})}{\mathrm{d}\dot{Q}}$  </li>
+                        <li class="fragment"> Use Legendre transformation to obtain the momentum $P=\frac{\partial L(Q,\dot{Q})}{\partial\dot{Q}}$  </li>
                         <li class="fragment"> Calculate $\dot{P}$ and use the geodesic equations to find expressions for Hamilton's equations  </li>
                         <ul>
                     </section>
@@ -198,7 +198,7 @@
                         </p>
                         <p class="fragment"> $H_{FR}(P,Q)=\frac{1}{2}\operatorname{Tr}(PQPQ)$ </p>
                     </section>
-                   
+
                     <section>
                         <h3>  Wasserstein–Otto case</h3>
                         <p class="fragment"> Hamilton's equations, with $Q=\Sigma$: \[\begin{aligned}\begin{cases}
@@ -216,7 +216,7 @@
                        </section>
                         <section>
                         <p> We see that $ \langle P,A\dot{Q}A^T \rangle_F=\langle A P A^T,\dot{Q} \rangle_F$
-                         
+
                         </p>
                         <p class="fragment"> Note that this means that the cotangent lifted action is $(A Q A^T,P) \to (Q,A^T PA)$
                         </p>
@@ -233,7 +233,7 @@
                         H_{WO}\left((Q,P).A\right)=\operatorname{Tr}(AA^TPQP)
                       \end{aligned}\]
                         </p>
-                        
+
                         </section>
                         <section>
                             <ul >
@@ -248,13 +248,13 @@
 
                                  <li class="fragment">  $\operatorname{O}(n)$ is a symmetry group for both cases </li>
                                  <li class="fragment"> Infinitesimal action for any $\xi \in \mathfrak{Lie}(\operatorname{O}(n))$ becomes $\xi(M)=\xi M-M\xi$, so $\langle \mathcal{P},\xi(Q)\rangle=\operatorname{Tr}(P\xi Q-PQ \xi)$</li>
-                                
+
                                  <li class="fragment">  The corresponding conserved quantity is $[Q,P]=QP-PQ$ </li>
                              </ul>
-                        
+
                         </section>
                 </section>
-                
+
                 <section>
                     <section data-transition="zoom">
                         <h2> Numerical solution of Hamilton's equations </h2>
@@ -264,7 +264,7 @@
                             <li class="fragment fade-out">  Integrate Hamilton's equation using a symplectic method </li>
                             <li class="fragment fragment">  Use symplectic Euler in both cases </li>
                         </ul>
-                    
+
                     </section>
                     <section>
                         <h3> Symplectic Euler for Fisher–Rao </h3>
@@ -278,13 +278,13 @@
                         Note that $H_{FR}(P_{n+1},Q_{n+1})=H_{FR}(P_{n},Q_{n})!$
                         </center>
                         </p>
-                       
+
                         </section>
                     <section>
                         <h3> Symplectic Euler for Wasserstein–Otto </h3>
                         <p><sub>
                         \[\begin{aligned}\begin{cases}
-                        P_{n+1}=P_n-h P_{n+1}\\
+                        P_{n+1}=P_n-h P_{n+1}^2\\
                         Q_{n+1}=Q_n+h \left(Q_nP_{n+1}+P_{n+1}Q_{n}\right)
                        \end{cases} \end{aligned}\]
                         </p></sub>
@@ -309,21 +309,21 @@
                     <section>
                         <h3>Evolution of $Q=\Sigma^{-1}$, Fisher–Rao </h3>
                         <img class="fragment"  src="./bilder_slutprez/FR.png" width="450" height="300">
-                                 
+
                     </section>
                     <section>
                         <h3>Evolution of $Q^{-1}=\Sigma^{-1}$, Wasserstein-Otto </h3>
-                       
+
                             <img class="fragment"  src="./bilder_slutprez/WO.png" width="450" height="300">
-                        
+
                     </section>
                     <section>
                         <h3>How does Q compare between cases?</h3>
                         <h5 class="fragment">In the beginning...</h5>
                         <img class="fragment"  src="./bilder_slutprez/comp_early.png" width="450" height="300">
-                          
+
                     </section>
-                  
+
                     <section>
                         <h3>Conserved quantities?</h3>
                         <table class="reveal">
@@ -331,7 +331,7 @@
                              <td><img class="fragment"  src="./bilder_slutprez/HamFR.png" width="450" height="300">
                                  </td>
                              <td><img class="fragment" src="./bilder_slutprez/HamWO.png" width="450" height="300"></td>
-                            
+
                            </tr>
                          </table>
                     </section>
@@ -343,7 +343,7 @@
                              <td><img class="fragment"  src="./bilder_slutprez/Entropy_all_FR.png" width="450" height="300">
                                  </td>
                              <td><img class="fragment" src="./bilder_slutprez/Entropy_all_WO.png" width="450" height="300"></td>
-                            
+
                            </tr>
                          </table>
                     </section>
@@ -370,7 +370,7 @@
                         <p><center class="fragment"> Questions?<center></p>
                     </section>¨
                 </div>
-            
+
 		</div>
         <style type="text/css">
           .reveal p {
@@ -401,7 +401,7 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-               
+
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});

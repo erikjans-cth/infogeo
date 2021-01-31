@@ -42,10 +42,10 @@
                 <section>
                     <table class="reveal">
                        <tr>
-                         <td> <img   src="./bilder_slutprez/mvn1.png" width="450" height="300">
+                         <td> <img   src="./bilder_slutprez/mvn1.png" width="600" height="350">
                              </td>
 
-                         <td><img class="fragment" src="./bilder_slutprez/mvn2.png" width="450" height="300"></td>
+                         <td><img class="fragment" src="./bilder_slutprez/mvn2.png" width="600" height="350"></td>
 
                        </tr>
                      </table>
@@ -66,7 +66,7 @@
                         <p > <center> <sup class="fragment">$M$, orientable compact Riemannian manifold</sup></center>  </p>
                          </section>
                 <section>
-                        <p>  <center>$\operatorname{Dens}(M)=\{\rho \in C^\infty(M)\left|\int_M \rho \mu=1, \rho>0\right.\}$</center> </p>
+                        <p>  <center>$\operatorname{Dens}(M)=\left\{\rho \in C^\infty(M)\left|\int_M \rho \mu=1, \rho>0\right.\right\}$</center> </p>
                         <div class="r-stack">
                              <img class="fragment" src="./bilder_slutprez/den.png",width="900" height="600">
                                  <img class="fragment" src="./bilder_slutprez/denwtan.png",width="900" height="600">
@@ -95,12 +95,12 @@
 
                     <section>
                         <div class="r-stack"><img src="./bilder_slutprez/varoc.png",width="450" height="300"> </center></div>
-                        <p><sup class="fragment"> For a minimizer $\gamma$  of $\mathcal{A}$ it must hold that $$\left.\frac{\mathrm{d}A(\gamma_0+\epsilon h)}{\mathrm{d}\epsilon} \right|_{\epsilon=0}=0$$</sup>   </p>
+                        <p><sup class="fragment"> For a minimizer $\gamma_0$  of $\mathcal{A}$ it must hold that $$\left.\frac{\mathrm{d}\mathcal{A}(\gamma_0+\epsilon h)}{\mathrm{d}\epsilon} \right|_{\epsilon=0}=0$$</sup>   </p>
                     </section>
                     <section>
-                        <p>  Plug in the expression of the Fisher-Rao metric...</p>
+                        <p>  Plug in the expression of the <span class="fragment highlight-red"> Fisher-Rao </span> metric...</p>
 
-                        <p class="fragment"> $$\left.\frac{\mathrm{d}}{\mathrm{d}\epsilon} A(\gamma_\epsilon)\right|_{\epsilon=0}=\int_0^1 \int_M \frac{2\dot h \dot\gamma_0}{\gamma_0}-\frac{\dot\gamma_0^2 h}{\gamma_0^2}\mathrm{d}s=0$$</p>
+                        <p class="fragment"> $$\left.\frac{\mathrm{d}}{\mathrm{d}\epsilon} \mathcal{A}(\gamma_\epsilon)\right|_{\epsilon=0}=\int_0^1 \int_M \frac{2\dot h \dot\gamma_0}{\gamma_0}-\frac{\dot\gamma_0^2 h}{\gamma_0^2}\mathrm{d}s=0$$</p>
                         <p class="fragment fade-in-then-out">...integrate by parts...</p>
                         <p class="fragment"> $$\int_0^1 \int_M h \left( \frac{\dot\gamma_0^2}{\gamma_0^2}-\frac{ 2\ddot\gamma_0 \gamma_0}{\gamma_0^2} \right)\mathrm{d}s=0$$</p>
                     </section>
@@ -110,7 +110,7 @@
                         <p class="fragment"> The fundamental lemma of variational calculus implies that $\ddot\gamma-\frac{\dot\gamma^2}{2\gamma}=0$ </p>
                     </section>
                     <section>
-                        <p> The Wasserstein–Otto case is more complex...</p>
+                        <p> The <span class="fragment highlight-red"> Wasserstein–Otto </span>  case is more complex...</p>
                         <p class="fragment"> Given a perturbation of the geodesic $\gamma_0+\epsilon h$, how does $S$ depend on $\epsilon$ and $h$?  </p>
 
                     </section>
@@ -143,8 +143,8 @@
                         <img src="./bilder_slutprez/geodC.png",width="450" height="300"> </center>
                     </section>
                     <section>
-                        <p class="fragment"> Fisher–Rao: The same approach as in the infinite-dimensional case works well </p>
-                        <p class="fragment"> Wasserstein-Otto: The simplest approach is to use geometry rather than direct variational principles </p>
+                        <p class="fragment"> Fisher–Rao: Straightforward!  </p>
+                        <p class="fragment"> Wasserstein-Otto: Not as straightforward! </p>
                     </section>
                     <section>
                         <p class="fragment"> For Fisher–Rao, note that $$ g_{ij}(\theta)=[I(\theta)]_{ij} $$ </p>
@@ -159,9 +159,9 @@
                         <p><sub><center class="fragment"> $\operatorname{O}(n,\Sigma_0)=\{A \in \operatorname{GL}(n)| A\Sigma_0A^T=\Sigma_0\}$, $\pi(A)=A\Sigma_0A^T$</center></sub></p>
                     </section>
                     <section>
-                        <p> Equip $\operatorname{GL}(n)$ with the natural $L^2$ metric </p>
-                        <p class="fragment"> Calculate derivative of the projection </p>
-                        <p class="fragment"> Calculate the descending metric on $\operatorname{P}(n)$ from this </p>
+                        <p class="fragment fade-in-then-out"> Equip $\operatorname{GL}(n)$ with the natural $L^2$ metric </p>
+                        <p class="fragment fade-in-then-out"> Calculate derivative of the projection </p>
+                        <p class="fragment fade-in-then-out"> Calculate the descending metric on $\operatorname{P}(n)$ from this </p>
                         <p class="fragment"> We obtain that $G_\Sigma(\dot \Sigma,\dot \Sigma)=\operatorname{Tr}(\Sigma S^2)$ with $\dot{\Sigma}=\Sigma S+S\Sigma $
                     </section>
                     <section>
@@ -239,7 +239,8 @@
                             <ul >
                              <li class="fragment">$\operatorname{GL}(n)$ is a symmetry group in the Fisher–Rao case</li>
                              <li class="fragment"> Note that $\mathfrak{Lie}(\operatorname{GL}(n))^* \cong M_n^* \cong M_n$.</li>
-                             <li class="fragment"> Infinitesimal action for any $\xi \in \mathfrak{Lie}(\operatorname{GL}(n))$ becomes $\xi(M)=\xi M+M\xi^T$, so $\langle \mathcal{P},\xi(Q)\rangle=\operatorname{Tr}(P\xi Q+PQ \xi^T)$</li>
+														 <li class="fragment"> Infinitesimal action for any $\xi \in \mathfrak{Lie}(\operatorname{GL}(n))$ becomes $\xi(M)=\xi M+M\xi^T$</li>
+                             <li class="fragment"> The <em> momentum map </em> $\mathcal{J}:T^*P(n) \to M_n$ is given by $$	\langle\mathcal{J}(P),\xi\rangle= \langle P,\xi(Q)\rangle=\operatorname{Tr}(P\xi Q+PQ \xi^T)$$</li>
                              <li class="fragment">  The corresponding conserved quantity is $2PQ$ </li>
                              </ul>
                         </section>
@@ -247,7 +248,7 @@
                              <ul >
 
                                  <li class="fragment">  $\operatorname{O}(n)$ is a symmetry group for both cases </li>
-                                 <li class="fragment"> Infinitesimal action for any $\xi \in \mathfrak{Lie}(\operatorname{O}(n))$ becomes $\xi(M)=\xi M-M\xi$, so $\langle \mathcal{P},\xi(Q)\rangle=\operatorname{Tr}(P\xi Q-PQ \xi)$</li>
+                                 <li class="fragment"> Infinitesimal action for any $\xi \in \mathfrak{Lie}(\operatorname{O}(n))$ becomes $\xi(M)=\xi M-M\xi$, so $$\langle\mathcal{J}(P),\xi\rangle= \langle P,\xi(Q)\rangle=\operatorname{Tr}(P\xi Q-PQ \xi)$$</li>
 
                                  <li class="fragment">  The corresponding conserved quantity is $[Q,P]=QP-PQ$ </li>
                              </ul>
@@ -351,7 +352,7 @@
                         <h3>Why? </h3>
                         <ul >
                             <li class="fragment">  $C(t)$ is a Fisher-Rao geodesic. </li>
-                            <li class="fragment">  $\dot{H}(t)=\frac{\mathrm{d}}{\mathrm{d}t}-\log(\det(C(t)))=-\operatorname{Tr}(C^{-1}\dot{C}) $ </li>
+                            <li class="fragment">  $\dot{H}(t)=-\frac{\mathrm{d}}{\mathrm{d}t}\left(\log(\det(C(t)))\right)=-\operatorname{Tr}(C^{-1}\dot{C}) $ </li>
                             <li class="fragment"> $-\operatorname{Tr}(C^{-1}\dot{C})=-\operatorname{Tr}(C^{-1} C P C)=-\operatorname{Tr}(PC)$... </li>
                             <li class="fragment"> $PC$ preserved on geodesics! </li>
                         </ul>
